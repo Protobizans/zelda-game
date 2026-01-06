@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zelda 3D - GitHub Edition</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Zelda 3D Adventure</title>
+    <!-- We laden Three.js in de head voor maximale stabiliteit -->
+    <script src="cdnjs.cloudflare.com"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        #ui { position: absolute; top: 20px; left: 20px; color: white; font-family: Arial; text-shadow: 2px 2px #000; z-index: 10; }
+    </style>
 </head>
 <body>
     <div id="ui">
         <div id="hearts">♥♥♥</div>
         <div id="rupees">Rupees: 0</div>
-        <div class="instructions">WASD: Lopen | SPATIE: Aanvallen</div>
     </div>
-    <!-- Gebruik de stabiele CDN van Three.js -->
-    <script src="cdnjs.cloudflare.com"></script>
-    <script src="game.js"></script>
+    <!-- Het script laden we als laatste -->
+    <script src="./game.js"></script>
 </body>
 </html>
